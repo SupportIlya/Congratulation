@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>С Днём Рождения!</title>
+  <style>
+    /* === Переменные и общие стили === */
+    :root {
+      --main-color: #ff6f91;
+      --accent-color: #ffb3c6;
+      --bg-color: #fff5fa;
+      --font-size: 16px;
+      --radius: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    /* === Hero Section === */
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: var(--main-color);
+      color: white;
+      border-radius: var(--radius);
+      margin-bottom: 30px;
+    }
+
+    .hero h1.animated {
+      animation: bounceIn 2s ease-in-out;
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      60% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    /* === Greetings Section === */
+    .greetings h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--main-color);
+    }
+
+    .greeting-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .greeting-list li {
+      background-color: #fff;
+      margin: 10px 0;
+      padding: 15px;
+      border-left: 5px solid var(--main-color);
+      border-radius: var(--radius);
+      transition: background-color 0.3s;
+    }
+
+    .greeting-list li:hover {
+      background-color: var(--accent-color);
+    }
+
+    /* === Gallery Section === */
+    .gallery h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--main-color);
+    }
+
+    .images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .images img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: var(--radius);
+      transition: transform 0.3s ease;
+    }
+
+    .images img:hover {
+      transform: scale(1.05);
+    }
+
+    /* === Form Section === */
+    .form-section {
+      margin-top: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .form-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--main-color);
+    }
+
+    #greeting-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    #greeting-form label {
+      font-weight: bold;
+    }
+
+    #greeting-form input,
+    #greeting-form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: var(--radius);
+      font-size: var(--font-size);
+      resize: vertical;
+    }
+
+    #greeting-form input:focus,
+    #greeting-form textarea:focus {
+      outline: none;
+      border-color: var(--main-color);
+      box-shadow: 0 0 5px var(--main-color);
+    }
+
+    #greeting-form button {
+      background-color: var(--main-color);
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #greeting-form button:hover {
+      background-color: #e65a78;
+    }
+
+    /* === Footer === */
+    .site-footer {
+      margin-top: 40px;
+      text-align: center;
+      padding: 20px;
+      background-color: #ffe6ec;
+      border-radius: var(--radius);
+      color: #555;
+    }
+
+    /* === Адаптивность === */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .greeting-list li {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+
+      .hero {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <h1 class="animated">🎉 С Днём Рождения! 🎉</h1>
+    <p>Пусть этот день будет полон радости и улыбок!</p>
+  </header>
+
+  <main>
+    <section class="greetings">
+      <h2>Топ поздравлений</h2>
+      <ul class="greeting-list">
+        <li>Желаю счастья, любви и вдохновения!</li>
+        <li>Пусть мечты сбываются, а сердце поёт!</li>
+        <li>Здоровья тебе и энергии на весь год!</li>
+      </ul>
+    </section>
+
+    <!-- === Gallery Section (обновлено) === -->
+    <section class="gallery">
+      <h2>Фото с праздника</h2>
+      <div class="images">
+        <img src="https://www.m24.ru/b/d/nBkSUhL2hFAkmcezIL6BvMKnxdDs9Zu-yyqYy7jLs2KQeXqLBmmcmzZh59JUtRPBsdaJqSfJd54qEr7t1mNwKSGK7WY=dbtIIefgQOwx2ISupLchOw.jpg"  alt="Торт на день рождения">
+        <img src="https://img.freepik.com/premium-photo/birthday-girls-with-cake-with-candles_109285-647.jpg"  alt="Подарки и шарики">
+        <img src="https://static.tildacdn.com/tild3135-3231-4239-a564-616465386634/DSC06299.jpg"  alt="Гости за столом">
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h2>Оставить поздравление</h2>
+      <form id="greeting-form">
+        <label for="name">Ваше имя:</label>
+        <input type="text" id="name" name="name" placeholder="Введите имя" required />
+
+        <label for="message">Ваше поздравление:</label>
+        <textarea id="message" name="message" placeholder="Напишите тёплые слова..." required></textarea>
+
+        <button type="submit">Отправить</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Поздравления с днём рождения</p>
+  </footer>
+
+</body>
+</html>
